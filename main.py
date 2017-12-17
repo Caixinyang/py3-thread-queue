@@ -17,7 +17,7 @@ class RunThread(threading.Thread):
 		
 		time.sleep(random.uniform(1, 3))
 		
-		if self.thread_mutex.acquire(10):
+		if self.thread_mutex.acquire(1000):
 			print(self.name + ' 执行完成!')			
 			self.thread_mutex.release()
 		
